@@ -27,3 +27,5 @@
 <ul>Unregistered user:
 <li>Can see list of veterinary clinics and Veterinarians which works there</li>
 </ul>		
+<br>
+<img src="http://res.cloudinary.com/dffww0cvc/image/upload/v1428160073/agora.profile_gl56a7.png">
