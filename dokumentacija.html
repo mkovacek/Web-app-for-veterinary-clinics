@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Sustav za praćenje i evidenciju klijenata veterinarskih ambulanata</title>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <meta name="author" content="Matija Kovaček">
+        <link rel="stylesheet"  href="foundation-5.2.2/css/app.css">
+        <link rel="stylesheet"  href="foundation-5.2.2/css/normalize.css">
+        <script src="foundation-5.2.2/js/vendor/modernizr.js"></script>
+        <style type="text/css"></style>
+        <meta class="foundation-data-attribute-namespace">
+        <meta class="foundation-mq-xxlarge">
+        <meta class="foundation-mq-xlarge">
+        <meta class="foundation-mq-large">
+        <meta class="foundation-mq-medium">
+        <meta class="foundation-mq-small">
+        <style></style>
+        <meta class="foundation-mq-topbar">
+    </head>
+    <body>
+       <header><p></p>
+        <div class="row show-for-medium-up">
+            <div class="contain-to-grid fixed" style="height: 105px">
+                <nav class="top-bar" data-topbar >
+                        <ul class="title-area">
+                            <li class="name">
+                                <a href="index.php"><img src="img/logonovo.png" alt="logo"></a>   
+                            </li>
+                        </ul>
+                    <section class="top-bar-section" style="margin-top: 50px">
+                         <ul class="right" style="height: 45px">
+                             <li><a href="registracija.php">REGISTRACIJA</a></li>
+                             <li><a href="prijava.php">PRIJAVA</a></li>
+                             <li><a href="dokumentacija.html">DOKUMENTACIJA</a></li>
+                         </ul>
+                       </section>
+                </nav>
+            </div>
+       </div>
+       <!--izbornik za smartphone-->   
+            <div class="row show-for-small-only">
+             <div class="off-canvas-wrap" data-offcanvas="open_method:overlap;">
+                <div class="inner-wrap">
+                    <nav class="tab-bar">
+                        <section class="left-small">
+                            <a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>
+                        </section>
+
+                        <section class="middle tab-bar-section">
+                            <h1 class="title"><a href="index.php" style="color:#008cba">eČuko</a></h1><h3>
+                        </section>
+                    </nav>
+                    <aside class="left-off-canvas-menu">
+                        <ul class="off-canvas-list" >
+                            <li><label style="color:#008cba">Izbornik</label></li>
+                            <li ><a href="index.php" style="color:#008cba">Početna</a></li>
+                            <li><a href="registracija.php" style="color:#008cba">Registracija</a></li>
+                            <li><a href="prijava.php" style="color:#008cba">Prijava</a></li>
+                            <li><a href="dokumentacija.html" style="color:#008cba">Dokumentacija</a></li>
+                        </ul>
+                    </aside>
+                    <section class="main-section">
+                            <div class="orbit-container">        
+                                <ul data-orbit data-options="animation:fade; navigation_arrows: false; slide_number:false; bullets:false; timer_speed:4000; resume_on_mouseout: true; pause_on_hover: false;"  style="height: 374px;">
+                                    <li>
+                                        <img src="img/1m.jpg" alt="slide 1" />
+                                        <div class="orbit-caption">Najbolja zaštita za Vaše ljubimce.</div>
+                                    </li>
+                                    <li>
+                                        <img src="img/4m.jpg" alt="slide 2" />
+                                        <div class="orbit-caption" >S Vašim ljubimcem nešto nije uredu?</div>
+                                    </li>
+                                    <li>
+                                        <img src="img/6m.jpg" alt="slide 3" />
+                                        <div class=" orbit-caption " >Imajte uvid u prošlost liječenja Vašeg ljubimca.</div>
+                                    </li>
+                                    <li>
+                                        <img src="img/9m.jpg" alt="slide 4" />
+                                        <div class="orbit-caption" >Brzo i jednostavno odaberite ambulantu.</div>
+                                    </li>
+                               </ul>
+                            </div>          
+                    </section>
+                    <a class="exit-off-canvas"></a>
+                </div>
+            </div>   
+       </div>          
+    </header>
+      <div id="divForma" class="row">
+            
+            <div class=" panel small-12 medium-12 large-12 xlarge-12 columns">
+                <div class="small-12 medium-12 large-12 xlarge-12 columns">
+                  <span class="label" style="width: 100%; margin-top: 20px; margin-bottom: 30px"><h4 class="text-center" style="color:white">Opis projektnog zadatka</h4></span>
+                </div>
+                <h4 class="text-center">eČuko</h4>
+                <p class="text-center">
+                    Sustav za praćenje i evidenciju klijenata veterinarske ambulante.
+                </p>
+                <p>Uloge</p>
+                <ul>
+                    <li class="text-justify"><h5>Administrator</h5> - može kreirati veterinarske ambulante i dodjeliti im moderatore/veterinare.
+                    Također administrator vidi statistiku korištenja sustava, pogrešnih/ispravnih prijava, po korisnicima i
+                    vremenskom periodu (od - do).Zatim može definirati tipove životinja za koje veterinar može biti stručan, te vidi listu 
+                    predstojećih termina za idući dan i može aktivirati slanje mail-ova dotičnim korisnicima.</li>
+                    <li class="text-justify"><h5>Veterinar/moderator</h5> - odabire tipove životinje za koje je stručan,unosi zapis o posjetima pacijenta (životinje).
+                    Veterinar može zaprimiti pacijenta (kućni ljubimac), te ukoliko mu je to prva posjeta, kreira
+                    njegovu kartoteku u kojoj je opisan datum i vrijeme primitka, tip životinje i opis simptoma.
+                    Zatim veteriran definira galeriju slika ljubimca (min 3 slike),na kraju liječenja se dodaju informacije u kartoteku: 
+                    o identificiranoj bolesti (preuzetoj sa popisa bolesti), opis primijenjene terapije te eventualno datum sljedećeg pregleda (ukoliko je
+                    potreban),te ispostavlja račun.Također ima uvid u statistiku termina i bolesti po veterinarskoj ambulanti i veterinaru, te
+                    po pojedinoj životinjskoj vrsti. Svi pregledi se baziraju na vremenskom periodu (od - do). </li>
+                    <li class="text-justify"><h5>Registrirani korisnik/klijent</h5> - je vlasnik pacijenta ambulante (kućnog ljubimca).
+                    Može imati jednog ili više pacijenta od kojih je svaki određen sa životinjskom vrstom, starosti
+                    životinje.Može pregledavati ambulante i prijaviti se u neku ambulantu.Svaki korisnik ima mogućnosti uvida u prošlost liječenja svojih kućnih ljubimaca, predstojećih
+                    termina za svoje ljubimce.</li>
+                    <li class="text-justify"><h5>Neregistrirani korisnik</h5> - može vidjeti popis ambulanti sa popisom liječnika.</li>
+                </ul> 
+            </div>
+          
+          <div class=" panel small-12 medium-12 large-12 xlarge-12 columns">
+              <div class="small-12 medium-12 large-12 xlarge-12 columns">
+                <span class="label" style="width: 100%; margin-top: 20px; margin-bottom: 30px"><h4 class="text-center" style="color:white">Opis projektnog rješenja i bitne odrednice projektnog rješenja</h4></span>
+          </div>
+            <p class="text-justify">
+                   Projektno rješenje koje je nastalo na temelju opisa projektnog zadatka, najbolje se može isčitati iz sljedećih dviju slika.
+                   Slika navigacijskog dijagrama prikazuje realiziranu funkcionalnost sustava,dok ERA model prikazuje 
+                   strukturu tablica potrebnih za samu realizaciju sustava.
+            </p>
+            <a href="img/NavigacijskiDijagram.png" target="_blank">
+                <img src="img/NavigacijskiDijagram.png" alt="Navigacijski dijagram" class="dijagrami">
+            </a><hr>
+            <a href="img/era.png" target="_blank">
+                <img src="img/era.png" alt="ERA dijagram">
+            </a>
+          </div>
+          <div class=" panel small-12 medium-12 large-12 xlarge-12 columns">
+              <div class="small-12 medium-12 large-12 xlarge-12 columns">
+                <span class="label" style="width: 100%; margin-top: 20px; margin-bottom: 30px"><h4 class="text-center" style="color:white">Korišteni alati,tehnologije,moduli/skripte</h4></span>
+            </div>
+              <div class=" panel small-4 medium-4 large-4 xlarge-4 columns">
+                <h4>Rad sustava</h4>
+                <ul>
+                     <li class="text-justify"><h5>PHP</h5></li>
+                     <li class="text-justify"><h5>Smarty</h5></li>
+                     <li class="text-justify"><h5>Datatables</h5></li>
+                     <li class="text-justify"><h5>Google Charts</h5>-za grafikone</li>
+                     <li class="text-justify"><h5>FPDF</h5>-za generiranje pdf dokumenata</li>
+                     <li class="text-justify"><h5>HTML</h5></li>
+                 </ul>
+              </div>
+              <div class=" panel small-4 medium-4 large-4 xlarge-4 columns">
+                <h4>Registracija</h4>
+                <ul>
+                     <li class="text-justify"><h5>jQuery-Ajax-xml</h5>- provjera korisničkog imena</li>
+                     <li class="text-justify"><h5>CAPTCHA</h5>- za sprjećavanje automata</li>
+                     <li class="text-justify"><h5>jQuery-Foundation abide</h5>-Validacija na strani klijenta</li>
+                 </ul>
+              </div>
+              <div class=" panel small-4 medium-4 large-4 xlarge-4 columns">
+                <h4>Dizajn</h4>
+                <ul>
+                    <li class="text-justify"><h5>Foundation</h5>-korišteni elementi: grid, block grid, top bar, offcanvas, orbit 
+                     slider, thumbnails, forms, buttons, reveal modal,pricing tables, tables, abide</li>
+                    <li class="text-justify"><h5>composer-git bash</h5>- za prilagođavanje i uređivanje sass-a kako bi dobio željeni css  </li>
+                 </ul>
+              </div>
+          </div>
+          <div class="small-12 medium-12 large-12 xlarge-12 columns">
+                <span class="label" style="width: 100%; margin-top: 20px; margin-bottom: 30px"><h4 class="text-center" style="color:white">Popis skripata</h4></span>
+          </div>
+           <div class=" panel small-4 medium-4 large-4 xlarge-4 columns">
+               <ul>
+                    <li class="text-justify">aktivacija.php/tpl</li>
+                    <li class="text-justify">aplikacijskiOkvir.php/tpl</li>
+                    <li class="text-justify">baza.class.php</li>
+                    <li class="text-justify">blokiraj.php/tpl</li>
+                    <li class="text-justify">cAmbulanta.php/tpl</li>
+                    <li class="text-justify">cDnevnik.php/tpl</li>
+                    
+                    <li class="text-justify">cGalerijaSlika.php/tpl</li>
+                    <li class="text-justify">cKartoteka.php/tpl</li>
+                    <li class="text-justify">cKartotekaDetalji.php/tpl</li>
+                    <li class="text-justify">cPopisBolesti.ph/tplp</li>
+                    <li class="text-justify">cSimptomi.php/tpl</li>
+                    <li class="text-justify">cStrucnost.php/tpl</li>
+                    
+                    <li class="text-justify">cTerapija.php/tpl</li>
+                    <li class="text-justify">cTermini.php/tpl</li>
+                    <li class="text-justify">cTipKorisnika.php/tpl</li>
+                    <li class="text-justify">cTipZivotinje.php/tpl</li>
+                    <li class="text-justify">cUtvrdenaBolest.php/tpl</li>
+                    <li class="text-justify">cZivotinje.php/tpl</li>
+                    
+                    <li class="text-justify">crudAmbulanta.php/tpl</li>
+                    <li class="text-justify">crudB.php/tpl</li>
+                    <li class="text-justify">crudDnevnik.php/tpl</li>
+                    <li class="text-justify">crudGalerijaSlika.php/tpl</li>
+                    <li class="text-justify">crudKartoteka.php/tpl</li>
+                    <li class="text-justify">crudKartotekaDetalji.php/tpl</li>
+                                        
+                    <li class="text-justify">crudKorisnik.php/tpl</li>
+                    <li class="text-justify">crudPopisBolesti.php/tpl</li>
+                    <li class="text-justify">crudRacun.php/tpl</li>
+                    <li class="text-justify">crudSimptomi.php/tpl</li>
+                    <li class="text-justify">crudStrucan.php/tpl</li>
+                    <li class="text-justify">crudTerapija.php/tpl</li>
+                    
+                    <li class="text-justify">crudTermini.php/tpl</li>
+                    <li class="text-justify">crudTipKorisnika.php/tpl</li>
+                    <li class="text-justify">crudTipZivotinje.php/tpl</li>
+                    <li class="text-justify">crudUtvrdenaBolest.php/tpl</li>
+                    <li class="text-justify">crudZivotinja.php/tpl</li>
+                    <li class="text-justify">dAmbulanta.php</li>
+                    
+                    <li class="text-justify">dDnevnik.php</li>
+                    <li class="text-justify">dGalerijaSlika.php</li>
+                    <li class="text-justify">dKartoteka.php</li>
+                    <li class="text-justify">dKartotekaDetalji.php</li>
+                    <li class="text-justify">dKorisnik.php</li>
+                    <li class="text-justify">dPopisBolesti.php</li>
+                                        
+                    <li class="text-justify">dRacun.php</li>
+                    <li class="text-justify">dSimptomi.php</li>
+                    <li class="text-justify">dStrucan.php</li>
+                    <li class="text-justify">dTerapija.php</li>
+                    <li class="text-justify">dTipKorisnika.php</li>
+                    <li class="text-justify">dTipZivotinje.php</li>                                                                  
+               </ul>
+          </div>
+          <div class=" panel small-4 medium-4 large-4 xlarge-4 columns">
+              <ul>
+                    <li class="text-justify">dUtvrdenaBolest.php</li>
+                    <li class="text-justify">dZivotinje.php</li>
+                    <li class="text-justify">definiranjeTipovaZivotinja.php/tpl</li>
+                    <li class="text-justify">dnevnik.php/tpl</li>
+                    <li class="text-justify">dodajKartoteku.php/tpl</li>
+                    <li class="text-justify">dodajLjubimca.php/tpl</li>
+                  
+                    <li class="text-justify">dodjelaAmbulanteVeterinaru.php/tpl</li>
+                    <li class="text-justify">dokumentacija.html</li>
+                    <li class="text-justify">error.php</li>
+                    <li class="text-justify">footer.php/tpl</li>
+                    <li class="text-justify">funkcionalnost.php</li>
+                    <li class="text-justify">fpdf.php</li>
+                  
+                    <li class="text-justify">galerijaSlika.php/tpl</li>
+                    <li class="text-justify">greske.php</li>
+                    <li class="text-justify">header.php/tpl</li>
+                    <li class="text-justify">headerLogIn.php/tpl</li>
+                    <li class="text-justify">index.php/tpl</li>
+                    <li class="text-justify">indexprijavljen.php</li>
+                                        
+                    <li class="text-justify">izdajRacun.php/tpl</li>
+                    <li class="text-justify">kartotekaDetalji.php/tpl</li>
+                    <li class="text-justify">kartoteke.php/tpl</li>
+                    <li class="text-justify">kartotekeKucnihLjubimaca.php/tpl</li>
+                    <li class="text-justify">korisnik.php/tpl</li>
+                    <li class="text-justify">kreiranjeAmbulanti.php/tpl</li>
+                    
+                    <li class="text-justify">kucniLjubimac.php/tpl</li>
+                    <li class="text-justify">mydatatable.js</li>
+                    <li class="text-justify">naplatiRacun.php/tpl</li>
+                    <li class="text-justify">odabirTipaZivotinje.php/tpl</li>
+                    <li class="text-justify">odjava.php</li>
+                    <li class="text-justify">otkljucaj.php</li>
+                                                            
+                    <li class="text-justify">otkljucavanje.php/tpl</li>
+                    <li class="text-justify">pocetna.php</li>
+                    <li class="text-justify">pocetnaAdmin.tpl</li>
+                    <li class="text-justify">pocetnaVeterinar.tpl</li>
+                    <li class="text-justify">pocetnaRegistriraniKorisnik.tpl</li>
+                    <li class="text-justify">posaljiEmail.php/tpl</li>
+                    <li class="text-justify">povijestBolesti.php/tpl</li>
+                    <li class="text-justify">predstojeciTermini.php/tpl</li>
+                    <li class="text-justify">pregledOdabirAmbulanti.php/tpl</li>
+                    
+                    <li class="text-justify">prijava.php/tpl</li>
+                    <li class="text-justify">proslostLijecenja.php/tpl</li>
+                    <li class="text-justify">provjeraKorImena.php</li>
+                    <li class="text-justify">provjeraKorisnika.php</li>
+                    <li class="text-justify">rAmbulanta.php/tpl</li>
+                    <li class="text-justify">rDnevnik.php/tpl</li>
+                                        
+                    <li class="text-justify">rGalerijaSlika.php/tpl</li>
+                    <li class="text-justify">rKartoteka.php/tpl</li>
+                    <li class="text-justify">rKartotekaDetalji.php/tpl</li>
+                    
+
+                    
+
+              </ul>
+          </div>
+          <div class=" panel small-4 medium-4 large-4 xlarge-4 columns">
+              <ul>  
+                    <li class="text-justify">rKorisnik.php/tpl</li>
+                    <li class="text-justify">rPopisBolesti.php/tpl</li>
+                    <li class="text-justify">rRacun.php/tpl</li>
+                    <li class="text-justify">rSimptomi.php/tpl</li>
+                    <li class="text-justify">rStrucan.php/tpl</li>
+                    <li class="text-justify">rTerapija.php/tpl</li>
+                    <li class="text-justify">rTermini.php/tpl</li>
+                    <li class="text-justify">rTipKorisnika.php/tpl</li>
+                    <li class="text-justify">rTipZivotinje.php/tpl</li>
+                  
+                    <li class="text-justify">rUtvrdenaBolest.php/tpl</li>
+                    <li class="text-justify">rZivotinje.html/tpl</li>
+                    <li class="text-justify">racun.php/tpl</li>
+                    <li class="text-justify">registracija.php/tpl</li>
+                    <li class="text-justify">saljiObavijest.php/tpl</li>
+                    <li class="text-justify">slike.php/tpl</li>
+                    
+                    <li class="text-justify">statBolestiAmb.php/tpl</li>
+                    <li class="text-justify">statBolestiVet.php/tpl</li>
+                    <li class="text-justify">statBolestiZiv.php/tpl</li>
+                    <li class="text-justify">statTerminiAmb.php/tpl</li>
+                    <li class="text-justify">statTerminiVet.php/tpl</li>
+                    <li class="text-justify">statTerminiZiv.php/tpl</li>
+                                        
+                    <li class="text-justify">statistikaAdmin.php/tpl</li>
+                    <li class="text-justify">statistikaVeterinar.php/tpl</li>
+                    <li class="text-justify">sutrasnjiTermini.php/tpl</li>
+                    <li class="text-justify">uAmbulanta.php/tpl</li>
+                    <li class="text-justify">uDnevnik.php/tpl</li>
+                    <li class="text-justify">uGalerijaSlika.php/tpl</li>
+                    
+                    <li class="text-justify">uKartoteka.php/tpl</li>
+                    <li class="text-justify">uKartotekaDetalji.php/tpl</li>
+                    <li class="text-justify">uKorisnik.php/tpl</li>
+                    <li class="text-justify">uPopisBolesti.php/tpl</li>
+                    <li class="text-justify">uSimptomi.php/tpl</li>
+                    <li class="text-justify">uStrucan.php/tpl</li>
+                                                            
+                    <li class="text-justify">uTerapija.php/tpl</li>
+                    <li class="text-justify">uTermini.php/tpl</li>
+                    <li class="text-justify">uTipKorisnika.php/tpl</li>
+                    <li class="text-justify">uTipZivotinje.php/tpl</li>
+                    <li class="text-justify">uUtvrdenaBolest.php/tpl</li>
+                    <li class="text-justify">uZivotinje.php/tpl</li>
+                    
+                    <li class="text-justify">unosSlike.php/tpl</li>
+                    <li class="text-justify">unosZapisaKartoteka.php/tpl</li>
+                    <li class="text-justify">upload_file.php/tpl</li>
+                    <li class="text-justify">validacijaKlijentFoundation.js</li>
+                    <li class="text-justify">validacijaKlijentJQ.js</li>
+                    <li class="text-justify">veterinariBezAmbulante.php</li>
+     
+                    <li class="text-justify">zabLozinka.php</li>
+                    <li class="text-justify">app.css</li>
+                </ul>
+          </div>
+          <div class=" panel small-12 medium-12 large-12 xlarge-12 columns">
+                <div class="small-12 medium-12 large-12 xlarge-12 columns">
+                  <span class="label" style="width: 100%; margin-top: 20px; margin-bottom: 30px"><h4 class="text-center" style="color:white">Mapa Web mjesta</h4></span>
+                </div>
+                <ul>
+                    <li>Početna</li>
+                    <li>Registracija</li>
+                    <li>Prijava
+                        <ul>
+                            <li>Početna administrator
+                                <ul>
+                                    <li>Kreiranje ambulante</li>
+                                    <li>Dodjela veterinara ambulantama</li>
+                                    <li>Definiranje vrste životinja</li>
+                                    <li>Lista predstojećih termina</li>
+                                    <li>Otključavanje/blokiranje kor. računa</li>
+                                    <li>Statistika korištenja sustava</li>
+                                    <li>CRUD DB
+                                        <ul>
+                                            <li>Tip korisnika</li>
+                                            <li>Korisnici</li>
+                                            <li>Tip životinja</li>
+                                            <li>Životinje</li>
+                                            <li>Stručnost veterinara</li>
+                                            <li>Ambulante</li>
+                                            <li>Kartoteke</li>
+                                            <li>Termini</li>
+                                            <li>Galerija slika</li>
+                                            <li>Detalji kartoteka</li>
+                                            <li>Simptomi</li>
+                                            <li>Terapija</li>
+                                            <li>Popis bolesti</li>
+                                            <li>Utvrđene bolesti</li>
+                                            <li>Računi</li>
+                                            <li>Dnevnik</li>
+                                        </ul>
+                                    </li>
+                                    <li>Pomak vremena</li>
+                                </ul>
+                            </li>
+                            <li>Početna veterinar
+                                <ul>
+                                    <li>Odabir tipa životinje</li>
+                                    <li>Kartoteke</li>
+                                    <li>Unos zapisa u kartoteku</li>
+                                    <li>Galerija slika</li>
+                                    <li>Ispostava računa</li>
+                                    <li>Statistika korištenja sustava</li>
+                                </ul>
+                            </li>
+                            <li>Početna klijent
+                                <ul>
+                                    <li>Pregled i odabir ambulante</li>
+                                    <li>Kućni ljubimci</li>
+                                    <li>Uvid u prošlost liječenja</li>
+                                    <li>Predstojeći termini</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                     </ul> 
+            </div>
+      </div>  
+      <footer id="footer">
+        <div class="row">
+            <div class="medium-9 medium-push-3 large-8 large-push-4 columns show-for-medium-up">
+                <br><br><p>© 2014 <a id="email" href="mailto:mkovacek@foi.hr">Matija Kovaček </a>| Sva prava pridržana </p>
+            </div> 
+            <div class="small-12 show-for-small-only" style="font-size:small ">
+                <p class="text-center">© 2014 <a id="email" href="mailto:mkovacek@foi.hr">Matija Kovaček </a></p> 
+                <p class="text-center">Sva prava pridržana </p>
+            </div>
+        </div>
+      </footer>
+        <script src="foundation-5.2.2/js/vendor/jquery.js"></script>
+      <script src="http://datatables.net/download/build/nightly/jquery.dataTables.js"></script>
+      <script src="foundation-5.2.2/js/foundation/foundation.js"></script>
+      <script src="foundation-5.2.2/js/foundation/foundation.offcanvas.js"></script>
+      <script src="foundation-5.2.2/js/foundation/foundation.orbit.js"></script>
+      <script>$(document).foundation();</script>
+    </body>
+</html>
