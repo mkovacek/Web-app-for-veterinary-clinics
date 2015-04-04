@@ -1,6 +1,6 @@
 # Web-app-for-veterinary-clinics
 <b>School project</b> <br>
-<b>Used technologies:</b> PHP, Javascript (jQuerry), Zurb Foundation, Smarty templates, MySQL<br><br>
+<b>Used technologies:</b> PHP, Javascript (jQuery), Zurb Foundation, Smarty templates, MySQL<br><br>
 <b>Description</b>
 <p>The web app is used to record and monitor customers of veterinary clinics.</p>
 <ul>Type of users:
