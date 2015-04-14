@@ -1,10 +1,10 @@
 <?php
 
 class Baza{
-    const server="localhost";
-    const baza="WebDiP2013_034";
-    const korisnik="WebDiP2013_034";
-    const lozinka="admin_hxei";
+    const server="server";
+    const baza="db";
+    const korisnik="user";
+    const lozinka="pass";
 
     
     function spojiBP(){  
