@@ -29,8 +29,7 @@
 </ul>		
 <br>
 <img src="http://res.cloudinary.com/dffww0cvc/image/upload/v1428160073/agora.profile_gl56a7.png">
-<img src="https://res.cloudinary.com/dffww0cvc/image/upload/v1439888038/vet2_z3kyjl.png">
-
+<img src="https://res.cloudinary.com/dffww0cvc/image/upload/v1439888863/Screenshot_2_rrhjii.jpg">
 <img src="https://res.cloudinary.com/dffww0cvc/image/upload/v1439888032/admin1_oolaz7.png">
 <img src="https://res.cloudinary.com/dffww0cvc/image/upload/v1439888051/admin2_iuiplp.png">
 <img src="https://res.cloudinary.com/dffww0cvc/image/upload/v1439888038/vet1_x4wo6o.png">
