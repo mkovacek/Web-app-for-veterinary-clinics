@@ -1,5 +1,5 @@
 # Web-app-for-veterinary-clinics
-<b><a href="https://ecuko-mkovacek.rhcloud.com/">Demo</b><br>
+<b><a href="https://ecuko-mkovacek.rhcloud.com/">Demo</a></b><br>
 <b>Used technologies:</b> PHP, Javascript (jQuery), Zurb Foundation, Smarty templates, MySQL<br><br>
 <b>Description</b>
 <p>The web app is used to record and monitor customers of veterinary clinics.</p>
